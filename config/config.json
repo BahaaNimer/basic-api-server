@@ -2,7 +2,7 @@
   "development": {
     "username": "username",
     "password": "password",
-    "database": "process.env.DATABASE_URL",
+    "database": "foods",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -16,7 +16,7 @@
   "production": {
     "username": "username",
     "password": "password",
-    "database": "process.env.DATABASE_URL",
+    "database": "foods",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
