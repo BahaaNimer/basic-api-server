@@ -11,22 +11,22 @@ const Clothes = require('./clothes.model');
 let sequelizeOptions =
   process.env.NODE_ENV === "production"
     ?
-    {
-      dialectOptions: {
-        ssl: {
-          require: true,
-          rejectUnauthorized: false,
-        },
-      },
-    }
     // {
-    //   dialect: 'postgres',
-    //   protocol: 'postgres',
     //   dialectOptions: {
-    //     ssl: true,
-    //     native: true
-    //   }
+    //     ssl: {
+    //       require: true,
+    //       rejectUnauthorized: false,
+    //     },
+    //   },
     // }
+    {
+      dialect: 'postgres',
+      protocol: 'postgres',
+      dialectOptions: {
+        ssl: true,
+        native: true
+      }
+    }
     : {};
 
 let sequelize = new Sequelize(POSTGRES_URI, sequelizeOptions);
